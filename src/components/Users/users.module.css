@@ -2,12 +2,3 @@
   width: 150px;
   height: 100px;
 }
-
-.selectedPage_s {
-  cursor: pointer;
-}
-
-.selectedPage {
-  font-weight: bold;
-  cursor: pointer;
-}

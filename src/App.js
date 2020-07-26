@@ -1,18 +1,17 @@
-import React from "react";
-import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import { Route, withRouter } from "react-router-dom";
-import DialogsContainer from "./components/Dialogs/DialogsContainer";
-import UsersContainer from "./components/Users/UsersContainer";
-import ProfileContainer from "./components/Profile/ProfileContainer";
-import HeaderContainer from "./components/Header/HeaderContainer";
-import LoginPage from "./components/Login/Login";
-import { Component } from "react";
-import { connect } from "react-redux";
-import { getAuthUserData } from "./../src/redux/auth-reducer";
-import { compose } from "redux";
-import { initializeApp } from "./redux/app-reducer";
-import Preloader from "./components/common/Preloader/preloader";
+import React from 'react';
+import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import { Route, withRouter } from 'react-router-dom';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
+import UsersContainer from './components/Users/UsersContainer';
+import ProfileContainer from './components/Profile/ProfileContainer';
+import HeaderContainer from './components/Header/HeaderContainer';
+import LoginPage from './components/Login/Login';
+import { Component } from 'react';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
+import { initializeApp } from './redux/app-reducer';
+import Preloader from './components/common/Preloader/preloader';
 
 class App extends Component {
   componentDidMount() {
@@ -41,7 +40,4 @@ const mapStateToProps = (state) => ({
   initialized: state.app.initialized,
 });
 
-export default compose(
-  withRouter,
-  connect(mapStateToProps, { initializeApp })
-)(App);
+export default compose(withRouter, connect(mapStateToProps, { initializeApp }))(App);
